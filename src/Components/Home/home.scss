@@ -1,0 +1,176 @@
+:root {
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsl(187, 85%, 43%);
+  --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(201, 33%, 16%);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyText: hsl(190, 0%, 75%);
+  --inputColor: hsl(0, 0%, 94%);
+  --bodyColor: hsl(240, 0%, 96.5%);
+  --cardBG: hsl(225, 0%, 92%);
+}
+
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(85, 85, 85, 0.5);
+  z-index: 1;
+}
+
+.rotating-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0.7;
+}
+
+.homeContent {
+  width: 100%;
+  height: max-content;
+  padding: 8rem 1.5rem 3rem;
+  display: flex;
+  row-gap: 3rem;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  margin: auto;
+  color: var(--whiteColor);
+  z-index: 100;
+  position: relative;
+}
+
+.textDiv {
+  padding: 2rem 0;
+}
+
+.smalltext {
+  font-size: 13px;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+}
+
+
+
+//Card div section
+.cardDiv {
+  position: relative;
+  padding: 2rem 1rem;
+  background: var(--whiteColor);
+  border-radius: 10px;
+  gap: 1rem;
+}
+
+.label_total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+label {
+  display: block;
+  color: var(--textColor);
+  padding-bottom: 10px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.total {
+  color: var(--textColor);
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+.textbox {
+  height: 40px;
+  padding: 0.1rem;
+  background: var(--inputColor);
+  border-radius: 3rem;
+  display: flex;
+  align-items: center; 
+}
+
+input {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 13px;
+  font-weight: 500;
+  margin: 0.5rem;
+}
+
+input::placeholder {
+  font-size: 13px;
+}
+
+.icon {
+  font-size: 24px;
+  color: var(--whiteColor);
+}
+
+.searchOptions {
+  background-color: var(--PrimaryColor);
+  width: 50%;
+  padding: 10px 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+&:hover {
+  background: var(--SecondaryColor);
+} 
+}
+
+span {
+  font-size: 12px;
+}
+
+.homeFooterIcon{
+  width: 100%;
+  justify-content: space-between;
+
+  .icon{
+    font-size: 30px;
+    margin: 0.5rem;
+    color: var(--whiteColorDeam);
+    &:hover{
+      color: var(--whiteColor);
+    }
+  }
+}
+
+//Media Queries
