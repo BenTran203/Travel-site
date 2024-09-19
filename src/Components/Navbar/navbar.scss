@@ -44,7 +44,18 @@
     color: var(--PrimaryColor);
     transform: translateY(5px);
 }
+.toggle-nav-bar {
+    cursor: pointer;
+}
+.toggle-nav-bar .icon {
+    font-size: 25px;
+    color: var(--PrimaryColor);
+}
+.toggle-nav-bar:hover .icon {
+    color: var(--SecondaryColor);
+}
 
+// Media query
 @media screen and (max-width: 768px) {
     .navBar {
         position: absolute;
@@ -93,13 +104,61 @@
     }
 }
 
-.toggle-nav-bar {
-    cursor: pointer;
+@media screen and (min-width: 769px) {
+    .toggle-nav-bar,.close-nav-bar
+    {
+        display: none;
+    }
+
+    .header{
+        padding: 1.5rem 2rem;
+        
+        .navBar{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+
+
+            .nav-item{
+                .nav-link{
+                    color:var(--textColor);
+                    padding: 0 0.45rem;
+                    font-size: 0.9rem;
+                    font-weight: 500;
+
+                    &:hover{
+                        color: var(--PrimaryColor);
+                    }
+                }
+            }
+
+            .btn{
+                margin-left: 1rem;
+                a{
+                    color: var(--whiteColor);
+                    font-weight: 500;
+                }
+            }
+        }
+    }
 }
-.toggle-nav-bar .icon {
-    font-size: 25px;
-    color: var(--PrimaryColor);
+
+@media screen and (min-width: 960px) {
+    .header{
+        .navBar{
+            .nav-lists{
+                .nav-item{
+                    padding: 0 0.7rem;
+                }
+            }
+        }
+    }
 }
-.toggle-nav-bar:hover .icon {
-    color: var(--SecondaryColor);
+
+@media screen and (min-width: 1240px) {
+    .header{
+        padding: 1rem 8.5rem;
+        max-width: 100%;
+    }
 }

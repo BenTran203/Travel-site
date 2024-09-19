@@ -138,7 +138,7 @@ input::placeholder {
 
 .searchOptions {
   background-color: var(--PrimaryColor);
-  width: 50%;
+  width: 30%;
   padding: 10px 3rem;
   display: flex;
   justify-content: center;
@@ -149,7 +149,7 @@ input::placeholder {
   top: 100%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 10px;
+  border-radius: 25px;
 &:hover {
   background: var(--SecondaryColor);
 } 
@@ -168,9 +168,60 @@ span {
     margin: 0.5rem;
     color: var(--whiteColorDeam);
     &:hover{
-      color: var(--whiteColor);
+      color: var(--SecondaryColor);
     }
   }
 }
 
 //Media Queries
+
+@media screen  and (min-width: 500px) {
+  .home{
+    .homeContent{
+      .textDiv{
+        .smalltext{
+          font-size: 16px;
+        }
+        .homeTitle{
+          position: relative;
+          font-size: 2.3rem;
+          width: max-content;
+
+          &::after{
+            position: absolute;
+            content: '';
+            height: 5px;
+            width: 145px;
+            right: 0;
+            bottom: 5px;
+            z-index: -1;
+          }
+        }
+      }
+      .cardDiv{
+        grid-template-columns: repeat(2,1fr);
+      }
+    }
+  }
+}
+ 
+@media screen and (min-width:660px) {
+     .home{
+      .homeContent{
+        .cardDiv{
+          padding: 2rem 1rem;
+          grid-template-columns: repeat(3,1fr);
+        }
+      }
+     }
+}
+@media screen and (min-width:940px) {
+     .home{
+      height: 70vh;
+     }
+}
+@media screen and (min-width:1240) {
+  .home{
+   height: 800vh;
+  }
+}

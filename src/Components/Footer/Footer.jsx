@@ -21,12 +21,12 @@ const Footer = () => {
 
       <div className="second-content container">
         <div className="contact-div flex">
-          <div className="text">
+          <div data-aos="fade-up"  className="text">
             <small>KEEP IN TOUCH</small>l<h2>Travel with us</h2>
           </div>
 
-          <div className="input-div flex">
-            <input
+          <div data-aos="fade-up" className="input-div flex">
+            <input 
               type="text"
               placeholder="Enter Email address"
               value=""
@@ -37,7 +37,7 @@ const Footer = () => {
             </button>
           </div>
         </div>
-        <div className="footer-card flex">
+        <div data-aos="fade-up"  className="footer-card flex">
           <div className="footer-intro flex">
             <div className="logo-div">
               <a href="" className="logo flex">
@@ -56,7 +56,11 @@ const Footer = () => {
           </div>
 
           <div className="footer-links grid">
-            <div className="link-group">
+
+            {/* Group 1 */}
+            <div data-aos="fade-up" 
+              data-aos-duration="3000"
+             className="link-group">
               <span className="group-title">
                 OUR AGENCY
               </span>
@@ -87,8 +91,49 @@ const Footer = () => {
               </li>
 
             </div>
+
+            {/* Group2 */}
+            <div data-aos="fade-up" 
+              data-aos-duration="4000"
+              className="link-group">
+              <span className="group-title">
+                PARTNERS
+              </span>
+
+              <li className="footer-list flex">
+              <FiChevronRight className="icon" />
+              Bookings
+              </li>  
+
+              <li className="footer-list flex">
+              <FiChevronRight className="icon" />
+              DiDi
+              </li>
+
+              <li className="footer-list flex">
+              <FiChevronRight className="icon" />
+              Lodgify
+              </li>
+
+              <li className="footer-list flex">
+              <FiChevronRight className="icon" />
+              Trivago
+              </li>
+
+              <li className="footer-list flex">
+              <FiChevronRight className="icon" />
+              TripAdvisor
+              </li>
+
+            </div>
           </div>
+
+          
         </div>
+        <div  data-aos="fade-up"  className="footer-div">
+            <small>TRAVEL WEBSITE</small>
+            <small>COPYRIGHTS RESEVERD - BENTRAN-2024</small>
+          </div>
       </div>
     </footer>
   );

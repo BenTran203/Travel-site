@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./home.scss";
 
+
 //Image carousel
 import image1 from "../../Assets/image 1.jpg";
 import image2 from "../../Assets/Image 2.jpg";
@@ -21,7 +22,6 @@ const Home = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [fade, setFade] = useState(true);
 
-  // Function to Change image every 6 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setFade(false);
@@ -45,11 +45,11 @@ const Home = () => {
 
       <div className="homeContent container">
         <div className="textDiv">
-          <span className="smalltext">Our Packages</span>
-          <h1 className="homeTitle">Search your Holiday</h1>
+          <span data-aos="fade-up" className="smalltext">Our Packages</span>
+          <h1 data-aos="fade-up" className="homeTitle">Search your Holiday</h1>
         </div>
 
-        <div className="cardDiv grid">
+        <div data-aos="fade-up" className="cardDiv grid">
           <div className="destinationInput">
             <label htmlFor="city">Search your destination</label>
             <div className="textbox flex">
@@ -78,7 +78,7 @@ const Home = () => {
             <span>MORE FILTER</span>
           </div>
         </div>
-        <div className="homeFooterIcon flex">
+        <div data-aos="fade-up" className="homeFooterIcon flex">
           <div className="rightIcons">
             <a href="https://www.facebook.com" target="_blank" rel="">
               <FaFacebook className="icon" />

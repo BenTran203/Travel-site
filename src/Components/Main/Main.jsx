@@ -64,14 +64,14 @@ const Main = () => {
   return (
     <section className="main container section">
       <div className="sec-title">
-        <h3 className="title">Most visited destinations</h3>
+        <h2 data-aos="fade-right" data-aos-duration="1500" className="title">Most visited destinations</h2>
       </div>
 
       <div className="sec-content grid">
         {Data.map(
           ({ id, imgSrc, desTitle, location, grade, fees, description }) => {
             return (
-              <div className="single-destination">
+              <div data-aos="fade-up" className="single-destination">
                 <div className="image-div">
                   <img src={imgSrc} alt={desTitle}></img>
                 </div>
