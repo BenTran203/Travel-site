@@ -1,0 +1,105 @@
+:root {
+    --PrimaryColor: hsl(199, 100%, 33%);
+    --SecondaryColor: hsl(187, 85%, 43%);
+    --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(201, 33%, 16%);
+    --textColor: hsl(240, 4%, 36%);
+    --whiteColorDeam: hsl(0, 0%, 93%);
+    --greyText: hsl(190, 0%, 75%);
+    --inputColor: hsl(0, 0%, 94%);
+    --bodyColor: hsl(240, 0%, 96.5%);
+    --cardBG: hsl(225, 0%, 92%);
+}
+
+.navBarSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--whiteColorDeam);
+    padding: 1rem;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(2, 15, 29, 0.242);
+    width: 100%; 
+    max-width: 1200px;
+}
+
+.logo {
+    color: var(--blackColor);
+    font-weight: 600;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+.icon{
+    font-size: 25px;
+    color: var(--PrimaryColor);
+    transform: translateY(5px);
+}
+
+@media screen and (max-width: 768px) {
+    .navBar {
+        position: absolute;
+        background: var(--whiteColorDeam);
+        height: max-content;
+        width: 80%;
+        border-radius: 1rem;
+        top: -50rem;
+        left: 50%;
+        padding: 1rem;
+        transform: translate(-50%);
+        z-index: 2000;
+        box-shadow: 0 2px 4px rgba(2, 15, 29, 0.9);
+        transition: top 0.5s ease-in-out;
+    }
+    .nav-lists {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        margin: auto;
+        padding: 0.5rem 0;
+    }
+    .nav-item {
+        padding: 0.5rem 0;
+    }
+    .nav-link {
+        color: var(--textColor);
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+    .navLink:hover {
+        color: var(--PrimaryColor);
+    }
+    .close-nav-bar {
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        color: var(--SecondaryColor);
+        cursor: pointer;
+    }
+    .close-nav-bar:hover {
+        color: var(--PrimaryColor);
+    }
+    .activeNavbar {
+        top: 7rem;
+    }
+}
+
+.toggle-nav-bar {
+    cursor: pointer;
+}
+.toggle-nav-bar .icon {
+    font-size: 25px;
+    color: var(--PrimaryColor);
+}
+.toggle-nav-bar:hover .icon {
+    color: var(--SecondaryColor);
+}
